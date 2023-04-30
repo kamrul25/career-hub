@@ -7,7 +7,9 @@ const ErrorPage = () => {
   return (
     <div className="flex flex-col justify-center items-center mt-[35vh] text-red-600">
       <h1 className="text-3xl font-bold mb-5">Oops!</h1>
-      <p className="text-3xl font-bold mb-5">Sorry, an unexpected error has occurred.</p>
+      <p className="text-3xl font-bold mb-5">
+        Sorry, an unexpected error has occurred.
+      </p>
       <p className="text-3xl font-bold mb-5">
         <i>{error.statusText || error.message}</i>
       </p>

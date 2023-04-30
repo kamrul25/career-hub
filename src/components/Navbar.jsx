@@ -9,7 +9,7 @@ import {
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className=" px-4 py-5  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className=" px-4 py-5  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 fixed top-0 left-0 right-0 z-10"  >
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-extrabold">Job Hub</h2>
         {/* Nav Items Section */}
@@ -64,7 +64,7 @@ const Navbar = () => {
             <Bars3BottomRightIcon className="w-5 text-gray-600" />
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full z-10">
+            <div className="fixed top-0 left-0 right-0 w-full z-10">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <h1 className="text-3xl font-extrabold">Job Hub</h1>
