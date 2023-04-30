@@ -1,0 +1,75 @@
+ [
+    {
+      "id": "1",
+      "companyLogo": "./assets/Logo/google-1-1 1-1.png",
+      "jobTitle": "Software Engineer",
+      "companyName": "Google",
+      "location": "",
+      "jobType":["Remote", "Full-time" ] ,
+      "salary": "$150,000 - $200,000",
+      "jobDescription": "We are looking for a talented software engineer to join our team.",
+      "jobRequirements": "5+ years of experience in software development, proficiency in JavaScript and React, etc.",
+      "contactInformation": { "phone": "123-456-7890", "email": "careers@google.com" }
+    },
+    {
+      "id": "2",
+      "companyLogo": "./assets/Logo/tesla-9 1.png",
+      "jobTitle": "Product Manager",
+      "companyName": "Tesla",
+      "location": "",
+      "jobType":["Onsite", "Part-time"],
+      "salary": "$80,000 - $100,000",
+      "jobDescription": "We are looking for a skilled product manager to help us build innovative products.",
+      "jobRequirements": "3+ years of experience in product management, strong communication and collaboration skills, etc.",
+      "contactInformation": { "phone": "555-123-4567", "email": "jobs@tesla.com" }
+    },
+    {
+      "id": "3",
+      "companyLogo": "./assets/Logo/apple-logo.png",
+      "jobTitle": "iOS Developer",
+      "companyName": "Apple",
+      "location": "",
+      "jobType":["Onsite", "Full-time"],
+      "salary": "$120,000 - $150,000",
+      "jobDescription": "We are seeking an experienced iOS developer to join our team and help us build world-class apps.",
+      "jobRequirements": "5+ years of experience in iOS development, strong knowledge of Swift and Xcode, etc.",
+      "contactInformation": { "phone": "999-555-1234", "email": "hr@apple.com" }
+    },
+    {
+      "id": "4",
+      "companyLogo": "./assets/Logo/google-1-1 1.png",
+      "jobTitle": "Data Scientist",
+      "companyName": "Google",
+      "location": "",
+      "jobType":["Remote", "Full-time"],
+      "salary": "$130,000 - $170,000",
+      "jobDescription": "We are looking for a data scientist to help us solve complex problems using data.",
+      "jobRequirements": "5+ years of experience in data science, strong knowledge of Python and SQL, etc.",
+      "contactInformation": { "phone": "123-456-7890", "email": "careers@google.com" }
+    },
+    {
+      "id": "5",
+      "companyLogo": "./assets/Logo/netflix-4 1.png",
+      "jobTitle": "Content Strategist",
+      "companyName": "Netflix",
+      "location": "",
+      "jobType":["Onsite", "Full-time"],
+      "salary": "$90,000 - $120,000",
+      "jobDescription": "We are seeking a creative content strategist to help us develop and promote our original content.",
+      "jobRequirements": "3+ years of experience in content strategy, strong writing and editing skills, etc.",
+      "contactInformation": { "phone": "777-888-9999", "email": "jobs@netflix.com" }
+    },
+    {
+      "id": "6",
+      "companyLogo": "./assets/Logo/microsoft-logo-4.png",
+      "jobTitle": "Cloud Solutions Architect",
+      "companyName": "Microsoft",
+      "location": "",
+      "jobType": ["Remote","Full-time"],
+      "salary": "$160,000 - $200,000",
+     " jobDescription": "We are looking for a highly skilled Cloud Solutions Architect to join our team.",
+      "jobRequirements": "8+ years of experience in cloud solutions architecture, expertise in Azure and AWS, etc.",
+      "contactInformation": { "phone": "222-333-4444", "email": "careers@microsoft.com" }
+    
+    }
+]
