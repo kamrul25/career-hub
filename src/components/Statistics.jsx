@@ -30,7 +30,7 @@ const Statistics = () => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis  />
-        <Tooltip cursor={{ stroke: 'red', strokeWidth: 2 }} />
+        <Tooltip cursor={{ stroke: 'red', strokeWidth: 2  }}/>
         <Legend />
         <Bar dataKey="mark" stackId="a" fill=" #82ca9d" />
        

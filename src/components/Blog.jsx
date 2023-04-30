@@ -36,7 +36,7 @@ const Blog = () => {
         </div>
       </div>
       <div className="max-w-screen-xl sm:mx-auto">
-        <div className="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-16  lg:grid-cols-2">
           <div className="rounded-lg shadow-md p-3 hover:border-2">
             <p className="mb-4 text-2xl font-medium">
               <span className="underline decoration-wavy decoration-yellow-500 decoration-1">
