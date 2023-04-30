@@ -21,7 +21,3 @@
 .default{
   @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400
 }
-
-.footer{
-  @apply  py-[300px] px-28 bg-black
-}
