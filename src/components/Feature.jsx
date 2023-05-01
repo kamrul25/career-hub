@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Job = () => {
+const Feature = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Job = () => {
     );
 };
 
-export default Job;
+export default Feature;

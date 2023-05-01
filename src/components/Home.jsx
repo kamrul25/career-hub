@@ -1,14 +1,66 @@
 import React from "react";
-import Banner from "./Banner";
+import { useLoaderData } from "react-router-dom";
+import JobFeatures from "./JobFeatures";
+import JobCategory from "./JobCategory";
 
 const Home = () => {
+  const categories = useLoaderData();
+
   return (
-    <div className="flex flex-col justify-between">
-      <Banner>
-        <h2 className="text-3xl text-black font-extrabold text-center my-24">
-          Home Page
-        </h2>
-      </Banner>
+    <div className="flex flex-col justify-between ">
+      <div className=" flex flex-col lg:flex-row justify-center items-center gap-4 ">
+        <div>
+          <h2 className="text-7xl font-extrabold text-[#413939] mb-4">
+            One Step <br /> Closer To Your <br />{" "}
+            <span className="text-blue-300"> Dream Job</span>
+          </h2>
+          <p className="text-base font-medium text-gray-500 mb-4">
+            Explore thousands of job opportunities with all the <br />{" "}
+            information you need. Its your future. Come find it. Manage all{" "}
+            <br /> your job application from start to finish.
+          </p>
+          <button className="btn rounded-lg  py-4 px-6">Get Started</button>
+        </div>
+        <div>
+          <img
+            src="../assets/All Images/P3OLGJ1 copy 1.png"
+            alt=""
+            className="object-cover w-full h-48 md:h-56 lg:h-[550px] "
+          />
+        </div>
+      </div>
+
+      <div className="mt-12 my-container">
+        <div className="text-center mb-7">
+          <h2 className="text-4xl font-extrabold text-[#413939] mb-4">
+            {" "}
+            Job Category List
+          </h2>
+          <p className="text-base font-medium text-gray-500">
+            Explore thousands of job opportunities with all the information you
+            need. Its your future
+          </p>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 ">
+          {categories.map((category) => (
+            <JobCategory key={category.id} category={category}></JobCategory>
+          ))}
+        </div>
+      </div>
+
+      <div className=" my-container">
+        <div className="text-center mb-7">
+          <h2 className="text-4xl font-extrabold text-[#413939] mb-4">
+            {" "}
+            Featured Jobs
+          </h2>
+          <p className="text-base font-medium text-gray-500">
+            Explore thousands of job opportunities with all the information you
+            need. Its your future
+          </p>
+        </div>
+        <JobFeatures></JobFeatures>
+      </div>
     </div>
   );
 };
