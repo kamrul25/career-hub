@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import Banner from "./Banner";
 import { JobDetailsContext } from "../App";
+import { addToDb } from "./utilities/fakedb";
+import toast, { Toaster } from 'react-hot-toast';
 
 const JobDetails = () => {
-  const [jobDetails, setJobDetails] = useContext(JobDetailsContext);
+  const [jobDetails, setJobDetails] = useContext(JobDetailsContext || []);
   const {
+    id,
     jobTitle,
     location,
     salary,
@@ -13,6 +16,7 @@ const JobDetails = () => {
     jobRequirements,
     contactInformation,
   } = jobDetails;
+  const notify = () => toast.success("Successfully applied!");
   return (
     <div>
       <Banner>
@@ -110,8 +114,9 @@ const JobDetails = () => {
             </div>
           </div>
           <button className="mt-4 btn w-full text-center rounded-lg py-4"
+          onClick={() => addToDb(id)}
           >
-            Apply Now
+            <p onClick={notify}>Apply Now </p> <Toaster />
           </button>
         </div>
       </div>
