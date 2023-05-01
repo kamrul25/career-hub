@@ -15,7 +15,10 @@
 }
 
 .btn{
-  @apply text-lg font-medium text-white  shadow-md  md:mb-0 bg-gradient-to-r from-[#7E90FE] to-[#7E90FE]
+  @apply text-lg font-medium text-white  shadow-md   bg-gradient-to-r from-[#7E90FE] to-[#7E90FE]
+}
+.btn-vice-versa{
+  @apply text-sm font-extrabold text-blue-300  shadow-md rounded-lg px-4 py-2 mr-3 border-blue-300 border mb-4
 }
 
 
