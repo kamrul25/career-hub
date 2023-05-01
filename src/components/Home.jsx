@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" my-container">
+      <div className="-mb-28">
         <div className="text-center mb-7">
           <h2 className="text-4xl font-extrabold text-[#413939] mb-4">
             {" "}

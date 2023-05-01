@@ -12,7 +12,7 @@ const JobFeature = ({ feature }) => {
       <p className="text-lg font-semibold text-[#757575] mb-3">{companyName}</p>
       <button className="btn-vice-versa">{jobType[1]}</button>
       <button className="btn-vice-versa">{jobType[0]}</button>
-      <div className="flex justify-between items-center mb-5">
+      <div className="flex items-center mb-5">
         <div className="flex justify-between items-center mr-2">
           <img src="./assets/Icons/Frame-4.png" alt="" />{" "}
           <small className="ml-2">{location}</small>

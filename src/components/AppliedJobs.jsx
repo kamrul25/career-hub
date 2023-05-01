@@ -9,7 +9,7 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </Banner>
-      <div></div>
+      <div className="-mb-28"></div>
     </div>
   );
 };

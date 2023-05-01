@@ -10,7 +10,7 @@ const Blog = () => {
         </h2>
       </Banner>
 
-      <div className="my-container mt-12">
+      <div className="my-container mt-12 -mb-32">
         <div className="max-w-xl mb-5 sm:mx-auto lg:max-w-2xl">
           <div className="max-w-xl  md:mx-auto sm:text-center lg:max-w-2xl">
             <h2 className="max-w-lg  font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
