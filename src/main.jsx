@@ -9,19 +9,24 @@ import Statistics from "./components/Statistics.jsx";
 import Blog from "./components/Blog.jsx";
 import AppliedJobs from "./components/AppliedJobs.jsx";
 import JobFeatures from "./components/JobFeatures.jsx";
+import JobDetails from "./components/JobDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    loader: () =>fetch(`jobFeatures.json`),
     children:[
       {
         path:'/',
         element:<Home />,
         loader: () => fetch("jobCategories.json"),
       },
-
+      {
+        path:"/jobDetails/:id",
+        element:<JobDetails />,
+      },
       {
         path:'/statistics',
         element:<Statistics />,
