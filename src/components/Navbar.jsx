@@ -47,12 +47,11 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-        <Link
-          to="/start-applying"
+        <button
           className="btn h-14 py-4 px-6 rounded-lg lg:block hidden"
         >
           Start Applying
-        </Link>
+        </button>
         {/* Mobile Navbar Section */}
         <div className="lg:hidden">
           {/* Dropdown Open Button */}
@@ -122,12 +121,11 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="mt-4">
-                    <Link
-                      to="/start-applying"
+                    <button
                       className="btn  py-2 px-3 rounded-lg lg:hidden "
                     >
                       Start Applying
-                    </Link>
+                    </button>
                   </li>
                 </ul>
               </div>
