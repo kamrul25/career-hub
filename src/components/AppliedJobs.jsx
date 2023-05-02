@@ -23,20 +23,29 @@ const AppliedJobs = () => {
 
   const handleFilter = (filter) => {
     let newJob = [];
+    let appliedArray = [];
+    const storedApplied = getAppliedJob();
+    for (const id in storedApplied) {
+      const exist = jobFeatures.filter((feature) => feature.id === id);
+      appliedArray.push(...exist);
+    }
+
+
     if (filter === "remote") {
-      const exist = allJobs.filter(
+      const existApplied = appliedArray.filter(
         (feature) => feature.jobType[0] === "Remote"
       );
-      newJob.push(...exist);
+      newJob.push(...existApplied);
       setAllJobs(newJob);
       toast.success("Successfully show remote job!");
-    } else if (filter === "onsite") {
-      const exist = allJobs.filter(
+    }
+    
+    else {
+      const existApplied = appliedArray.filter(
         (feature) => feature.jobType[0] === "Onsite"
       );
-      newJob.push(...exist);
+      newJob.push(...existApplied);
       setAllJobs(newJob);
-      toast.success("Successfully show onsite job!");
     }
   };
 
@@ -47,7 +56,7 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </Banner>
-      <div className="  mt-32 -mb-28 my-container relative grid grid-cols-1 gap-6 ">
+      <div className="  mt-32 -mb-28 my-container relative">
         <div className=" rounded-lg absolute top-0 right-10 w-fit">
           <button
             className="py-5 bg-[#F4F4F4] text-[#474747] text-xl font-semibold  flex justify-between items-center gap-2 "
@@ -73,10 +82,14 @@ const AppliedJobs = () => {
             </div>
           )}
         </div>
-
-        {allJobs.map((appliedJob) => (
-          <AppliedJob key={appliedJob.id} appliedJob={appliedJob}></AppliedJob>
-        ))}
+                  <div className="grid grid-cols-1 gap-6">
+            {allJobs.map((appliedJob) => (
+              <AppliedJob
+                key={appliedJob.id}
+                appliedJob={appliedJob}
+              ></AppliedJob>
+            ))}
+          </div>
       </div>
     </div>
   );
