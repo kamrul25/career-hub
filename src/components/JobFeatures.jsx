@@ -16,12 +16,6 @@ const JobFeatures = () => {
               <JobFeature key={feature.id} feature={feature}></JobFeature>
             ))}
           </div>
-          <button
-              className="btn rounded-lg py-4 px-6"
-              onClick={() => setFold(!fold)}
-            >
-              See Less
-            </button>
           </>
         ) : (
           <>

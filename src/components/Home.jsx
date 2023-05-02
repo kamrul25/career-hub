@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-between ">
       <div className=" flex flex-col lg:flex-row justify-center items-center gap-4 ">
-        <div>
+        <div className="px-4">
           <h2 className="text-7xl font-extrabold text-[#413939] mb-4">
             One Step <br /> Closer To Your <br />{" "}
             <span className="text-blue-300"> Dream Job</span>

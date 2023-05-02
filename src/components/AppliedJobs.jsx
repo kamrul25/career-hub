@@ -30,7 +30,6 @@ const AppliedJobs = () => {
       appliedArray.push(...exist);
     }
 
-
     if (filter === "remote") {
       const existApplied = appliedArray.filter(
         (feature) => feature.jobType[0] === "Remote"
@@ -38,9 +37,7 @@ const AppliedJobs = () => {
       newJob.push(...existApplied);
       setAllJobs(newJob);
       toast.success("Successfully show remote job!");
-    }
-    
-    else {
+    } else {
       const existApplied = appliedArray.filter(
         (feature) => feature.jobType[0] === "Onsite"
       );
@@ -82,14 +79,14 @@ const AppliedJobs = () => {
             </div>
           )}
         </div>
-                  <div className="grid grid-cols-1 gap-6">
-            {allJobs.map((appliedJob) => (
-              <AppliedJob
-                key={appliedJob.id}
-                appliedJob={appliedJob}
-              ></AppliedJob>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 gap-6">
+          {allJobs.map((appliedJob) => (
+            <AppliedJob
+              key={appliedJob.id}
+              appliedJob={appliedJob}
+            ></AppliedJob>
+          ))}
+        </div>
       </div>
     </div>
   );
