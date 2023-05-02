@@ -9,8 +9,7 @@ const AppliedJob = ({ appliedJob }) => {
     appliedJob;
   return (
     <>
-        
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-1 md:gap-10 lg:gap-80 p-6 border rounded-lg">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-1 md:gap-10 lg:gap-80 p-6 border rounded-lg mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-[#F4F4F4] rounded-lg ">
             <div className="py-10 pl-20 md:px-10 md:py-20 ">

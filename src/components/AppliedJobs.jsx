@@ -24,14 +24,14 @@ const AppliedJobs = () => {
   const handleFilter = (filter) => {
     let newJob = [];
     if (filter === "remote") {
-      const exist = jobFeatures.filter(
+      const exist = allJobs.filter(
         (feature) => feature.jobType[0] === "Remote"
       );
       newJob.push(...exist);
       setAllJobs(newJob);
       toast.success("Successfully show remote job!");
     } else if (filter === "onsite") {
-      const exist = jobFeatures.filter(
+      const exist = allJobs.filter(
         (feature) => feature.jobType[0] === "Onsite"
       );
       newJob.push(...exist);
@@ -47,13 +47,14 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </Banner>
-      <div className=" mt-32 -mb-28 my-container relative ">
-        <div className=" rounded-lg absolute top-0 right-10  w-fit ">
+      <div className="  mt-32 -mb-28 my-container relative grid grid-cols-1 gap-6 ">
+        <div className=" rounded-lg absolute top-0 right-10 w-fit">
           <button
-            className="py-5 px-5 bg-[#F4F4F4] text-[#474747] text-lg font-semibold hover:text-xl flex justify-between items-center gap-2"
+            className="py-5 bg-[#F4F4F4] text-[#474747] text-xl font-semibold  flex justify-between items-center gap-2 "
             onClick={() => setIsFilterOpen(!isFilterOpen)}
           >
-            <span>Filter By</span> <ChevronDownIcon className="w-5 h-5 "/>
+            <span className="pl-4">Filter By</span>{" "}
+            <ChevronDownIcon className="w-5 h-5 " />
           </button>
           {isFilterOpen && (
             <div className="mt-3 px-2 flex  items-center gap-2">
@@ -72,14 +73,10 @@ const AppliedJobs = () => {
             </div>
           )}
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-4">
-          {allJobs.map((appliedJob) => (
-            <AppliedJob
-              key={appliedJob.id}
-              appliedJob={appliedJob}
-            ></AppliedJob>
-          ))}
-        </div>
+
+        {allJobs.map((appliedJob) => (
+          <AppliedJob key={appliedJob.id} appliedJob={appliedJob}></AppliedJob>
+        ))}
       </div>
     </div>
   );
