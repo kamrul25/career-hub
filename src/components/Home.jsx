@@ -1,13 +1,8 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
 import JobFeatures from "./JobFeatures";
-import JobCategory from "./JobCategory";
+import JobCategories from "./JobCategories";
 
 const Home = () => {
-  const categoriesByLoader = useLoaderData();
-
-  // const categories = Array.from(categoriesByLoader);
-  const categories = [...categoriesByLoader];
 
   return (
     <div className="flex flex-col justify-between ">
@@ -45,9 +40,7 @@ const Home = () => {
           </p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 ">
-          {categories.map((category) => (
-            <JobCategory key={category.id} category={category}></JobCategory>
-          ))}
+            <JobCategories></JobCategories>
         </div>
       </div>
 
