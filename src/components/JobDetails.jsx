@@ -16,6 +16,7 @@ const JobDetails = () => {
     jobRequirements,
     contactInformation,
   } = jobDetails;
+ 
   const notify = () => toast.success("Successfully applied!");
   return (
     <div>
@@ -92,7 +93,7 @@ const JobDetails = () => {
               <p className="text-lg font-medium">
                 <span className="text-[#1A1919]">Phone: </span>
                 <span className=" text-[#757575]">
-                  {contactInformation.phone}
+                  {contactInformation?.[0]}
                 </span>
               </p>
             </div>
@@ -101,7 +102,7 @@ const JobDetails = () => {
               <p className="text-lg font-medium">
                 <span className="text-[#1A1919]">Email: </span>
                 <span className=" text-[#757575]">
-                  {contactInformation.email}
+                  {contactInformation?.[1]}
                 </span>
               </p>
             </div>

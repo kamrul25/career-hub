@@ -8,7 +8,6 @@ import Home from "./components/Home.jsx";
 import Statistics from "./components/Statistics.jsx";
 import Blog from "./components/Blog.jsx";
 import AppliedJobs from "./components/AppliedJobs.jsx";
-import JobFeatures from "./components/JobFeatures.jsx";
 import JobDetails from "./components/JobDetails.jsx";
 
 const router = createBrowserRouter([
@@ -16,31 +15,30 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-    loader: () =>fetch(`jobFeatures.json`),
-    children:[
+    loader: () => fetch(`jobFeatures.json`),
+    children: [
       {
-        path:'/',
-        element:<Home />,
+        path: "/",
+        element: <Home />,
         loader: () => fetch("jobCategories.json"),
       },
       {
-        path:"/jobDetails/:id",
-        element:<JobDetails />,
+        path: "/jobDetails/:id",
+        element: <JobDetails />,
       },
       {
-        path:'/statistics',
-        element:<Statistics />,
-        loader: () => fetch("statistics.json"),
+        path: "/statistics",
+        element: <Statistics />,
       },
       {
-        path:'/applied-jobs',
-        element:<AppliedJobs />,
+        path: "/applied-jobs",
+        element: <AppliedJobs />,
       },
       {
-        path:'/blog',
-        element:<Blog />,
-      }
-    ]
+        path: "/blog",
+        element: <Blog />,
+      },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

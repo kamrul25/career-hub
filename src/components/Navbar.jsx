@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  BoltIcon,
-  Bars3BottomRightIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className=" px-4 py-5  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 fixed top-0 left-0 right-0 z-10"  >
+    <div className=" px-4 py-5  sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 fixed top-0 left-0 right-0 z-10">
       <div className="flex items-center justify-between">
         <h2 className="text-3xl font-extrabold">Job Hub</h2>
         {/* Nav Items Section */}
@@ -47,9 +44,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-        <button
-          className="btn h-14 py-4 px-6 rounded-lg lg:block hidden"
-        >
+        <button className="btn h-14 py-4 px-6 rounded-lg lg:block hidden">
           Start Applying
         </button>
         {/* Mobile Navbar Section */}
@@ -121,9 +116,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="mt-4">
-                    <button
-                      className="btn  py-2 px-3 rounded-lg lg:hidden "
-                    >
+                    <button className="btn  py-2 px-3 rounded-lg lg:hidden ">
                       Start Applying
                     </button>
                   </li>

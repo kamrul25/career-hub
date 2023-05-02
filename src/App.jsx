@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -16,14 +16,11 @@ function App() {
         <Navbar></Navbar>
       </div>
       <JobsContext.Provider value={jobFeatures}>
-
-      <JobDetailsContext.Provider value={[jobDetails, setJobDetails]}>
-
+        <JobDetailsContext.Provider value={[jobDetails, setJobDetails]}>
           <Outlet></Outlet>
-
         </JobDetailsContext.Provider>
-
       </JobsContext.Provider>
+
       <Footer></Footer>
     </div>
   );

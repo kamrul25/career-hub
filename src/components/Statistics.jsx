@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 // import Rechart from './Rechart';
 import {
@@ -13,8 +13,12 @@ import {
 import Banner from "./Banner";
 
 const Statistics = () => {
-  const sta = useLoaderData();
-
+  const [chart, setChart] = useState([]);
+  useEffect(() => {
+    fetch("statistics.json")
+      .then((res) => res.json())
+      .then((data) => setChart(data));
+  }, []);
   return (
     <div className="flex flex-col justify-between">
       <Banner>
@@ -26,7 +30,7 @@ const Statistics = () => {
         <BarChart
           width={900}
           height={300}
-          data={sta}
+          data={chart}
           margin={{
             top: 5,
             right: 30,

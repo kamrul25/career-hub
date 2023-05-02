@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { JobDetailsContext } from "../App";
+import { JobDetailsContext} from "../App";
 
 const JobFeature = ({ feature }) => {
   const [jobDetails, setJobDetails] = useContext(JobDetailsContext);
+ 
   const {
     id,
     companyLogo,
@@ -35,7 +36,7 @@ const JobFeature = ({ feature }) => {
           </div>
         </div>
         <Link to={`/jobDetails/${id}`} className="btn rounded-lg  py-4 px-6" onClick={() => setJobDetails(feature)}>
-          View Details
+        View Details
         </Link>
       </div>
   );

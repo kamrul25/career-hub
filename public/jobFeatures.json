@@ -10,7 +10,7 @@
       "jobDescription": "We are looking for a talented software engineer to join our team.",
       "jobResponsibility":"Developing and directing software system validation and testing methods.Working closely with clients and cross-functional departments to communicate project statuses and proposals.Creating innovative solutions to meet our company’s technical needs.Testing new software and fixing bugs.",
       "jobRequirements": "5+ years of experience in software development, proficiency in JavaScript and React, etc.",
-      "contactInformation": { "phone": "123-456-7890", "email": "careers@google.com" }
+      "contactInformation": ["123-456-7890", "careers@google.com" ]
     },
     {
       "id": "2",
@@ -23,7 +23,7 @@
       "jobDescription": "We are looking for a skilled product manager to help us build innovative products.",
       "jobResponsibility":"Understanding and representing user needs.Monitoring the market and developing competitive analyses.Defining a vision for a product. Prioritizing product features and capabilities.Creating a shared brain across larger teams to empower independent decision-making.",
       "jobRequirements": "3+ years of experience in product management, strong communication and collaboration skills, etc.",
-      "contactInformation": { "phone": "555-123-4567", "email": "jobs@tesla.com" }
+      "contactInformation": ["555-123-4567", "jobs@tesla.com" ]
     },
     {
       "id": "3",
@@ -36,7 +36,7 @@
       "jobDescription": "We are seeking an experienced iOS developer to join our team and help us build world-class apps.",
       "jobResponsibility":"Design and build applications for the iOS platform.Ensure the performance, quality, and responsiveness of applications.Collaborate with a team to define, design, and ship new features.Identify and correct bottlenecks and fix bugs.Help maintain code quality, organization, and automatization.",
       "jobRequirements": "5+ years of experience in iOS development, strong knowledge of Swift and Xcode, etc.",
-      "contactInformation": { "phone": "999-555-1234", "email": "hr@apple.com" }
+      "contactInformation": ["999-555-1234", "hr@apple.com" ]
     },
     {
       "id": "4",
@@ -49,7 +49,7 @@
       "jobDescription": "We are looking for a data scientist to help us solve complex problems using data.",
       "jobResponsibility":"Identifying relevant data sources for business needs.Collecting structured and unstructured data.Sourcing missing data.Building machine learning algorithms.Enhancing the data collection process.Analysing data for trends and patterns and to find answers to specific questions.Setting up data infrastructure.Develop, implement and maintain databases.",
       "jobRequirements": "5+ years of experience in data science, strong knowledge of Python and SQL, etc.",
-      "contactInformation": { "phone": "123-456-7890", "email": "careers@google.com" }
+      "contactInformation": ["123-456-7890", "careers@google.com" ]
     },
     {
       "id": "5",
@@ -62,7 +62,7 @@
       "jobDescription": "We are seeking a creative content strategist to help us develop and promote our original content.",
       "jobResponsibility":"Performing exhaustive research to gain in-depth knowledge of all customer personas.Performing extensive research and analysis on consumer thoughts and trends.Creating specifications and content appropriate for the brand's customer personas.Collaborating with content management teams, creative teams, and writers to implement the strategy.Developing content governance guidelines for tone, style, and voice of all content, and ensuring they are followed.Developing editorial strategy, so content is consistent across all delivery platforms.",
       "jobRequirements": "3+ years of experience in content strategy, strong writing and editing skills, etc.",
-      "contactInformation": { "phone": "777-888-9999", "email": "jobs@netflix.com" }
+      "contactInformation": ["777-888-9999", "jobs@netflix.com" ]
     },
     {
       "id": "6",
@@ -75,7 +75,7 @@
      "jobDescription": "We are looking for a highly skilled Cloud Solutions Architect to join our team.",
      "jobResponsibility":"Work closely with IT security to monitor the company’s cloud privacy.Respond to technical issues in a professional and timely manner.Offer guidance in infrastructure movement techniques, including bulk application transfers into the cloud.Identify the top cloud architecture solutions to successfully meet the needs of the company.Lead our organization through cloud adoption and establish best practices.Vet and select cloud providers and third-party services",
       "jobRequirements": "8+ years of experience in cloud solutions architecture, expertise in Azure and AWS, etc.",
-      "contactInformation": { "phone": "555-123-4567", "email": "jobs@tesla.com" }
+      "contactInformation": ["555-123-4567", "jobs@tesla.com" ]
     
     }
 ]

@@ -4,7 +4,10 @@ import JobFeatures from "./JobFeatures";
 import JobCategory from "./JobCategory";
 
 const Home = () => {
-  const categories = useLoaderData();
+  const categoriesByLoader = useLoaderData();
+
+  // const categories = Array.from(categoriesByLoader);
+  const categories = [...categoriesByLoader];
 
   return (
     <div className="flex flex-col justify-between ">
