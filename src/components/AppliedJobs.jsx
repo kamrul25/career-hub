@@ -3,10 +3,13 @@ import Banner from "./Banner";
 import { JobsContext } from "../App";
 import { getAppliedJob } from "./utilities/fakedb";
 import AppliedJob from "./AppliedJob";
+import toast, { Toaster } from "react-hot-toast";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const AppliedJobs = () => {
   const jobFeatures = useContext(JobsContext || []);
   const [allJobs, setAllJobs] = useState([]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   useEffect(() => {
     const storedApplied = getAppliedJob();
@@ -18,6 +21,25 @@ const AppliedJobs = () => {
     setAllJobs(newJob);
   }, [jobFeatures]);
 
+  const handleFilter = (filter) => {
+    let newJob = [];
+    if (filter === "remote") {
+      const exist = jobFeatures.filter(
+        (feature) => feature.jobType[0] === "Remote"
+      );
+      newJob.push(...exist);
+      setAllJobs(newJob);
+      toast.success("Successfully show remote job!");
+    } else if (filter === "onsite") {
+      const exist = jobFeatures.filter(
+        (feature) => feature.jobType[0] === "Onsite"
+      );
+      newJob.push(...exist);
+      setAllJobs(newJob);
+      toast.success("Successfully show onsite job!");
+    }
+  };
+
   return (
     <div className="flex flex-col justify-between ">
       <Banner>
@@ -25,8 +47,32 @@ const AppliedJobs = () => {
           Applied Jobs
         </h2>
       </Banner>
-      <div className=" mt-32 -mb-28 my-container">
-        <div className="grid grid-cols-1 gap-6">
+      <div className=" mt-32 -mb-28 my-container relative ">
+        <div className=" rounded-lg absolute top-0 right-10  w-fit ">
+          <button
+            className="py-5 px-5 bg-[#F4F4F4] text-[#474747] text-lg font-semibold hover:text-xl flex justify-between items-center gap-2"
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+          >
+            <span>Filter By</span> <ChevronDownIcon className="w-5 h-5 "/>
+          </button>
+          {isFilterOpen && (
+            <div className="mt-3 px-2 flex  items-center gap-2">
+              <p
+                className="cursor-pointer  text-[#757575] hover:text-lg border-blue-300 rounded p-1  border"
+                onClick={() => handleFilter("remote")}
+              >
+                Remote <Toaster />
+              </p>
+              <p
+                className="cursor-pointer text-[#757575] hover:text-lg border-blue-300 rounded p-1 border"
+                onClick={() => handleFilter("onsite")}
+              >
+                Onsite <Toaster />
+              </p>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-1 gap-6 mt-4">
           {allJobs.map((appliedJob) => (
             <AppliedJob
               key={appliedJob.id}

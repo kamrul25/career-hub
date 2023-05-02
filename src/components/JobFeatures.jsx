@@ -1,21 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import JobFeature from "./JobFeature";
 import { JobsContext } from "../App";
 
 const JobFeatures = () => {
   const jobFeatures = useContext(JobsContext || []);
   const [fold, setFold] = useState(true);
-  const [allJobs, setAllJobs] = useState(jobFeatures);
 
-  const showAllJobs = (jobFeatures) =>{
-    if(jobFeatures > 4 && fold === 'true'){
-      jobFeatures = jobFeatures.slice(0,4);
-      setAllJobs(jobFeatures)
-    }else{
-      setAllJobs(jobFeatures);
-    }
-  }
-// console.log(allJobs)
   return (
     <div>
       <div className="flex flex-col  items-center ">
